@@ -102,7 +102,7 @@ export default function BotSettings({ bot, onSave, onClearToken, onClose }) {
             </button>
           </div>
         ) : (
-          <p className="hint">Токен не задан — бот не может быть запущен</p>
+          <p className="hint">Токен не задан - бот не может быть запущен</p>
         )}
 
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '10px 0 4px' }}>
@@ -157,7 +157,7 @@ export default function BotSettings({ bot, onSave, onClearToken, onClose }) {
                 value={sched.workStart}
                 onChange={(e) => setSched({ ...sched, workStart: e.target.value })}
               />
-              <span>—</span>
+              <span>-</span>
               <input
                 type="time"
                 value={sched.workEnd}

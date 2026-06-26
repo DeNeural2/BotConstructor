@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 const BASE = '/botconstructor';
 
 export const NODE_PREVIEWS = {
-  start:        { img: `${BASE}/start_guide.jpg`,              title: 'Старт',          desc: 'Бот реагирует на команду /start — с этого начинается любой сценарий.' },
+  start:        { img: `${BASE}/start_guide.jpg`,              title: 'Старт',          desc: 'Бот реагирует на команду /start - с этого начинается любой сценарий.' },
   message:      { img: `${BASE}/confirmed_guide.jpg`,          title: 'Сообщение',      desc: 'Бот отправляет текстовое сообщение клиенту. Поддерживает {{переменные}}.' },
-  buttons:      { img: `${BASE}/choice_guide.png`,             title: 'Кнопки',         desc: 'Инлайн-кнопки прикреплены к сообщению — клиент выбирает один из вариантов, кнопки исчезают после нажатия.' },
-  menu:         { img: `${BASE}/main_menu_guide.jpg`,             title: 'Главное меню',   desc: 'Постоянная клавиатура внизу чата — остаётся видимой в любой момент разговора.' },
+  buttons:      { img: `${BASE}/choice_guide.png`,             title: 'Кнопки',         desc: 'Инлайн-кнопки прикреплены к сообщению - клиент выбирает один из вариантов, кнопки исчезают после нажатия.' },
+  menu:         { img: `${BASE}/main_menu_guide.jpg`,             title: 'Главное меню',   desc: 'Постоянная клавиатура внизу чата - остаётся видимой в любой момент разговора.' },
   question:     { img: `${BASE}/questions_guide.jpg`,          title: 'Вопрос',         desc: 'Бот задаёт вопрос и ждёт текстового ответа. Ответ сохраняется в переменную.' },
   notification: { img: `${BASE}/admin_notification_guide.jpg`, title: 'Уведомление',    desc: 'Сообщение отправляется администратору бота (adminChatId в настройках).' },
 };

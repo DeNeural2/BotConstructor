@@ -88,7 +88,7 @@ export default function NodeEditor({ node, onChange, onClose }) {
       {node.type === 'menu' && (
         <>
           <p className="hint" style={{ margin: '4px 0 8px' }}>
-            Постоянная клавиатура — остаётся в чате. Каждая кнопка — отдельная ветка.
+            Постоянная клавиатура - остаётся в чате. Каждая кнопка - отдельная ветка.
           </p>
           <label>Сохранить выбор в переменную</label>
           <input value={data.saveAs || ''} onChange={(e) => update({ saveAs: e.target.value })} placeholder="например: menu_choice" />
@@ -110,19 +110,19 @@ export default function NodeEditor({ node, onChange, onClose }) {
           <textarea rows={3} value={data.text || ''} onChange={(e) => update({ text: e.target.value })} placeholder="Поддерживает {{переменные}}" />
           <label>Тип ожидаемого ответа</label>
           <select value={data.answerType || 'text'} onChange={(e) => update({ answerType: e.target.value })}>
-            <option value="text">Текст — любой ответ</option>
-            <option value="date">Дата — проверяет формат и что не в прошлом</option>
-            <option value="time">Время — проверяет формат ЧЧ:ММ</option>
+            <option value="text">Текст - любой ответ</option>
+            <option value="date">Дата - проверяет формат и что не в прошлом</option>
+            <option value="time">Время - проверяет формат ЧЧ:ММ</option>
           </select>
           {data.answerType === 'date' && (
-            <p className="hint">Принимает: «25 июня», «25.06», «25.06.2025». Дата в прошлом — отклоняется.</p>
+            <p className="hint">Принимает: «25 июня», «25.06», «25.06.2025». Дата в прошлом - отклоняется.</p>
           )}
           {data.answerType === 'time' && (
             <>
               <p className="hint">Принимает: «14:00», «9:30», «1400». Хранится в формате ЧЧ:ММ.</p>
               <label>Переменная с датой (для фильтра занятых слотов)</label>
               <input value={data.dateVar || ''} onChange={(e) => update({ dateVar: e.target.value })} placeholder="например: date" />
-              <p className="hint">Если расписание включено — скрывает уже занятые слоты в пикере.</p>
+              <p className="hint">Если расписание включено - скрывает уже занятые слоты в пикере.</p>
             </>
           )}
           <label>Сохранить ответ в переменную</label>
@@ -188,13 +188,13 @@ export default function NodeEditor({ node, onChange, onClose }) {
       {node.type === 'booking' && (
         <>
           <p className="hint" style={{ margin: '4px 0 8px' }}>
-            Проверяет, свободен ли слот, и фиксирует запись. Правый выход ✓ — слот свободен, ✗ — занят.
+            Проверяет, свободен ли слот, и фиксирует запись. Правый выход ✓ - слот свободен, ✗ - занят.
           </p>
           <label>Переменная с датой</label>
           <input value={data.dateVar || ''} onChange={(e) => update({ dateVar: e.target.value })} placeholder="например: date" />
           <label>Переменная со временем</label>
           <input value={data.timeVar || ''} onChange={(e) => update({ timeVar: e.target.value })} placeholder="например: time" />
-          <p className="hint">Формат: дата — «дд.мм.гггг», время — «ЧЧ:ММ». Длительность слота берётся из расписания бота.</p>
+          <p className="hint">Формат: дата - «дд.мм.гггг», время - «ЧЧ:ММ». Длительность слота берётся из расписания бота.</p>
         </>
       )}
     </div>

@@ -4,10 +4,9 @@ const TelegramBot = require('node-telegram-bot-api');
 const Bot = require('../models/Bot');
 const LeadSubmission = require('../models/LeadSubmission');
 
-// Any origin — website forms submit from client domains
+// Any origin - website forms submit from client domains
 const open = cors({ origin: '*', methods: ['POST', 'OPTIONS'] });
 router.use(open);
-router.options('*', open);
 
 // Friendly labels for common form field names
 const FIELD_LABELS = {
@@ -35,7 +34,7 @@ function formatFields(data) {
   return lines.join('\n') || '(нет данных)';
 }
 
-// POST /api/webhook/:botId  — called by the client's website form
+// POST /api/webhook/:botId  - called by the client's website form
 router.post('/:botId', async (req, res) => {
   let bot;
   try {

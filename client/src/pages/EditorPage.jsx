@@ -96,7 +96,7 @@ function EditorInner() {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
 
-  // Right-panel state — only one active at a time
+  // Right-panel state - only one active at a time
   const [selectedNode, setSelectedNode] = useState(null);
   const [selectedEdge, setSelectedEdge] = useState(null);
   const [showSettings, setShowSettings] = useState(false);
@@ -193,7 +193,7 @@ function EditorInner() {
     setEdges((eds) => eds.map((e) => ({ ...e, selected: e.id === edge.id })));
   }, [setEdges]);
 
-  // ── Pane click — deselect everything ────────────────────────────────────
+  // ── Pane click - deselect everything ────────────────────────────────────
   const onPaneClick = useCallback(() => {
     setSelectedNode(null);
     setSelectedEdge(null);
@@ -225,7 +225,7 @@ function EditorInner() {
     }
   }, []); // removeNode is stable (defined below with setNodes/setEdges)
 
-  // During drag — check if cursor is over trash to highlight it
+  // During drag - check if cursor is over trash to highlight it
   const onNodeDrag = useCallback((event) => {
     if (!trashRef.current) return;
     const { left, right, top, bottom } = trashRef.current.getBoundingClientRect();
@@ -300,7 +300,7 @@ function EditorInner() {
     }
   }
 
-  // Internal save without token check — used by handleToggle after token is confirmed present
+  // Internal save without token check - used by handleToggle after token is confirmed present
   async function handleSaveInternal() {
     setSaving(true);
     setError('');
@@ -494,7 +494,7 @@ function EditorInner() {
             <MiniMap nodeColor="#555" maskColor="#111a" />
           </ReactFlow>
 
-          {/* Trash zone — appears while dragging a node */}
+          {/* Trash zone - appears while dragging a node */}
           {isDragging && (
             <div
               ref={trashRef}

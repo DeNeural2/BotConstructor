@@ -181,7 +181,7 @@ export default function DashboardPage() {
                     <span className={`status-badge ${st.cls}`}>{st.label}</span>
                   </div>
                   {!bot.hasToken && (
-                    <p className="warn-token">Токен не задан — бота нельзя запустить</p>
+                    <p className="warn-token">Токен не задан - бота нельзя запустить</p>
                   )}
                   <div className="bot-card-actions">
                     <button
